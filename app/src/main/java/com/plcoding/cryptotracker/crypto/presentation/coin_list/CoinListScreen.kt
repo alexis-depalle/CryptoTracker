@@ -24,6 +24,7 @@ fun CoinListScreen(
     state: CoinListState,
     modifier: Modifier = Modifier
 ) {
+
     if (state.isLoading) {
         Box(
             modifier = modifier
@@ -58,7 +59,7 @@ private fun CoinListScreenPreview() {
     CryptoTrackerTheme {
         CoinListScreen(
             state = CoinListState(
-                coins = (1..100).map{
+                coins = (1..100).map {
                     previewCoin.copy(id = it.toString())
                 }
             ),
